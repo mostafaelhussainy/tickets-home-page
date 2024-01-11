@@ -1,0 +1,318 @@
+.fulldvh {
+  height: 100dvh;
+  background: linear-gradient(100deg, #ee96d5, #ff4e00db, #ff00bb4f);
+  background-size: cover;
+
+  header,
+  #hero {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-top: 40px;
+    margin-bottom: 80px;
+    h1,
+    button,
+    span,
+    div {
+      color: #fff;
+    }
+    svg path {
+      fill: #fff;
+    }
+    button,
+    fieldset {
+      border-color: #fff;
+    }
+    h1 {
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: 600;
+      align-self: center;
+    }
+    .navigation {
+      display: flex;
+      column-gap: 20px;
+    }
+    .controls {
+      display: flex;
+      align-items: stretch;
+      column-gap: 10px;
+      .MuiSelect-select {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        span {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+  #hero {
+    h2 {
+      font-size: 52px;
+      font-weight: 300;
+      color: #fff;
+      margin-bottom: 80px;
+    }
+    .search-input {
+      width: 100%;
+      fieldset {
+        border: none;
+        outline: none;
+      }
+      .MuiFormControl-root {
+        width: 100%;
+        background-color: #fff;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+#bullet-slider {
+  height: 759px;
+  overflow: hidden;
+  .figure-slide {
+    .MuiPaper-root.MuiPaper-rounded {
+      border-radius: 0;
+    }
+    .figure-card {
+      position: relative;
+      overflow: hidden;
+
+      &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        h3 {
+          font-family: Roboto;
+          font-weight: 300;
+          font-size: 52px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          row-gap: 20px;
+          span {
+            font-family: Roboto;
+            font-weight: 300;
+            font-size: 36px;
+            font-style: italic;
+          }
+        }
+      }
+
+      &:hover .figure-card__overlay {
+        opacity: 1;
+      }
+    }
+  }
+  .slick-dots {
+    display: block;
+    bottom: 25px;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    li {
+      margin: 0;
+    }
+  }
+}
+#find-tickets-button {
+  width: 100%;
+  padding: 30px;
+  background: #f27474;
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 28px;
+  font-weight: 300;
+  text-transform: lowercase;
+  svg {
+    font-size: 30px;
+  }
+}
+.bottom-bg {
+  background: linear-gradient(#ece6e1, #d8a58fdb, #dd77c74f);
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none; /* Ensures clicks pass through the overlay */
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 0%,
+      transparent 25%,
+      transparent 75%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+}
+#categories {
+  padding-top: 80px;
+  margin-bottom: 80px;
+  h3 {
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 32px;
+    color: pink;
+    margin-bottom: 60px;
+  }
+  .slick-list {
+    position: relative;
+    padding: 0px 50px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .slick-prev {
+    left: 3% !important;
+  }
+  .slick-next {
+    right: 3% !important;
+  }
+  .slick-prev,
+  .slick-next {
+    z-index: 100;
+    &::before {
+      content: unset !important;
+    }
+    color: #915a63 !important;
+    &:hover {
+      color: #915a63 !important;
+    }
+  }
+  .categories-card {
+    width: fit-content;
+    box-shadow: none;
+    background: none;
+    img {
+      border-radius: 20px;
+      overflow: hidden;
+      width: 285px !important;
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    h4 {
+      text-align: center;
+      font-family: "Roboto";
+      font-size: 22px;
+      color: #7d7c7c;
+    }
+  }
+}
+#experience {
+  max-width: 80%;
+  margin: 0 auto 200px;
+  h3 {
+    text-align: left;
+    margin-bottom: 60px;
+    font-size: 72px;
+    font-weight: 700;
+    font-family: Roboto;
+    color: #fd92a4;
+    strong {
+      color: #bd3e0c;
+    }
+  }
+
+  .experience__cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+
+    .experience__card {
+      font-size: 33px;
+      font-weight: 700;
+      font-family: Roboto;
+      color: #fd92a4;
+      padding: 20px;
+      background: linear-gradient(to bottom, white, #ffc0cb28);
+      text-align: left;
+      min-height: 200px;
+      border-radius: 30px;
+      flex: 1;
+    }
+  }
+}
+footer {
+  max-width: 80%;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+  position: relative;
+  h4 {
+    color: #fff;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .row {
+    display: flex;
+    column-gap: 10px;
+  }
+  .download .row button {
+    border-radius: 10px;
+    background: #000;
+    width: fit-content;
+    color: #fff;
+    column-gap: 10px;
+
+    span {
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      font-family: Roboto;
+      font-weight: 300;
+      font-size: 8px;
+      strong {
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+  }
+  .links {
+    a {
+      color: #fff;
+      font-family: Roboto;
+      font-weight: 300;
+      font-size: 18px;
+      margin-bottom: 20px;
+      display: block;
+    }
+  }
+  .follow-us {
+    button {
+      color: #fff;
+    }
+  }
+  .get-in-touch {
+    span {
+      display: block;
+      display: flex;
+      column-gap: 10px;
+      align-items: center;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+  }
+}
